@@ -5,6 +5,9 @@ function App() {
   const [t, setT] = useState(new Date())
   const [alarm, setAlarm] = useState("")
 
+
+  console.log(t, t.toLocaleTimeString())
+
   useEffect(()=>{
     setInterval(()=>{
       setT(new Date())
