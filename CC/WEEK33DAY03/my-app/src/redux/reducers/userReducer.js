@@ -1,23 +1,14 @@
 const initialState = {
-    user: {},
-    posts: [],
     counter: 0
 }
 
 
+//action is a function which retun object
+
+//based on different action type, we perform different task
 
 const userReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "SET_USER":
-            return {
-                ...state,
-                user: action.payload,
-            }
-        case "SET_POSTS":
-            return {
-                ...state,
-                posts: action.payload,
-            }
         case "INCREMENT_COUNTER":
             return {
                 ...state,

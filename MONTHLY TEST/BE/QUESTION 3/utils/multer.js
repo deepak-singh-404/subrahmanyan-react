@@ -20,7 +20,7 @@ let multer = require("multer");
 let upload = multer({
     storage: multer.memoryStorage(),
     limits: {
-        fileSize: 1024*1024*5
+        fileSize: 1024*1024*2
     },
     fileFilter: function (req, file, cb) {
         if (file.mimetype === "image/jpeg" || file.mimetype === "image/png" || file.mimetype === "image/jpg") {

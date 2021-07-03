@@ -7,7 +7,6 @@ function App() {
   const [task, setTask] = useState("")
   const [tasks, setTasks] = useState([])
   const [currentTask, setCurrentTask] = useState({})
-
   const [show, setShow] = useState(false);
 
 
@@ -57,6 +56,9 @@ function App() {
           </form>
         </Modal.Body>
       </Modal>
+
+
+
       <div className="App">
         <form onSubmit={addTaskHandler}>
           <input type="text" placeholder="task .." value={task} onChange={(e) => setTask(e.target.value)} />
@@ -71,6 +73,9 @@ function App() {
             </>
           )}
         </div>
+
+
+        
       </div>
     </>
   );
