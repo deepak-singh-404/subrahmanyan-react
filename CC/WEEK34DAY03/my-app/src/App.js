@@ -1,18 +1,24 @@
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux'
-import {incrementCounter, decrementCounter} from './redux/actions/userAction'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Navbar from './components/Navbar'
+import Profile from './components/Profile'
+import Video from './components/Video'
+import Footer from './components/Footer'
+
 
 function App() {
-
-  const dispatch = useDispatch()
-  const {counter} = useSelector(s=>s.userRoot)
-
   return (
-    <div className="App">
-      <button onClick={()=>dispatch(incrementCounter())}>Increment</button>
-      <h2>{counter}</h2>
-      <button onClick={()=>dispatch(decrementCounter())}>Decrement</button>
-    </div>
+    <>
+    <Router>
+      <Navbar/>
+    <Switch>
+      <Route exact path='/profile' component={Profile} />
+      <Route exact path='/video' component={Video} />
+    </Switch>
+    <Footer />
+  </Router>
+    </>
   );
 }
 
