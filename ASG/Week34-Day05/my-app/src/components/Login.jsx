@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import {useDispatch} from 'react-redux'
 import {setProfile} from '../redux/actions/userAction'
 
-const client_id = ""
+const client_id = "219000976185-969dq2vbeoa3sip9cggfne7gqini6o6t.apps.googleusercontent.com"
 
 const Login = () => {
   const history = useHistory();
